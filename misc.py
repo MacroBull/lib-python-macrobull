@@ -70,11 +70,11 @@ def tex(s):
 	return r
 	#return r'$'+s+r'$'
 
-def linear(a,b,u):
-	return a*u+b*(1-u)
+#def linear(a,b,u):
+	#return a*u+b*(1-u)
 
-def extend(a,b,u):
-	return (a*(1+u)+b*-u,a*-u+b*(1+u))
+#def extend(a,b,u):
+	#return (a*(1+u)+b*-u,a*-u+b*(1+u))
 
 
 def average(t,x,y):

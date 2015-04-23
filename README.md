@@ -1,9 +1,14 @@
-MacroBull's Python Library
+﻿MacroBull's Python Library
 ===========
 
 My python library
 
-dynamicPlot.py
+stlink
+----
+Trying to wrap stlink by ctypes
+* stlink.stream: monitor a serial of specific memory addresses and stream data out, with dynamicPlot you can make a jtag-based oscilloscope
+
+dynamicPlot
 -------
 Simple dynamic updating plot framework based on **matplotlib.animation**
 
@@ -28,18 +33,13 @@ Example:
 ![Screenshot](./screenshots/dynamicPlot.png)
 
 
-ETA.py
+ETA
 -----
-A class to calculate estimate time by set present progress, two diffrent algorithms are given.
+A class to calculate estimate time by current progress, two different algorithms are given.
 
-keyEvent.py
+keyEvent
 -----
 Handle key press events for Python in terminal via termios and fcntl.
-
-misc.py
------
-Miscellaneous fuctions such as **serialChecker** for automatic choose avaliable serialport and **json_dict2obj** to convert parsed json dict to a javascript-like object.
-
 
 oscProcess
 -----
@@ -47,7 +47,14 @@ A class , oscWave, for oscilloscope data analyze and visualization, with some si
 
 Now it support models of Rigol, Tekronix and neoScope.
 
-**oscUtility.py** is a part of oscProcess for detial signal measurement and analyze including 
+**oscUtility.py** is a part of oscProcess for detail signal measurement and analyze including 
 signal generator, peak extractor and annotator, p-p value calculation, rise/fall Time calculation, distortion calculation.
 
 [oscProcess/demo/examples.py](./oscProcess/demo/examples.py) gives some examples.
+
+
+misc
+-----
+* mplTheme: Change matplotlib theme quickly
+* serialChecker: Automatically choose available serial port device
+* json_dict2obj: Convert parsed json dict to a JavaScript-like object.

@@ -16,7 +16,7 @@ from pylab import *
 
 from __init__ import plotBlankRemains
 
-from macrobull.misc import linear
+from macrobull.linear import linear
 
 def generator(waveType,t,z=0,a=1,w=1,p=0,d=0.5):
 	'''
