@@ -14,7 +14,8 @@ from scipy import signal
 from scipy.optimize import leastsq
 from pylab import *
 
-from __init__ import plotBlankRemains
+#from __init__ import plotBlankRemains
+plotBlankRemains = 0.1
 
 from macrobull.linear import linear
 

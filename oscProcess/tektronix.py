@@ -14,7 +14,7 @@ Details:
 	count of channels:	1(per file)
 	count of samples:	2482
 	resolution:	8bit
-	
+
 """
 
 import csv
@@ -22,7 +22,7 @@ import sys
 import numpy as np
 #from pylab import *
 
-from __init__ import *
+from .__init__ import *
 
 
 #SAMPLESIZE=2500-18

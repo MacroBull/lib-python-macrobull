@@ -32,7 +32,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
-from macrobull.misc import extend, defaultSubplotMargin, average
+from macrobull.misc import defaultSubplotMargin, average
+from macrobull.linear import extend
 
 
 defaultProcFunc=[lambda x,y:average(60,x,y), lambda x,y:average(0,x,y) ]

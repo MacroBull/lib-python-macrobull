@@ -17,11 +17,18 @@ from numpy.fft import fft
 #from . import oscFilter
 #from . import oscUtility
 
-import oscFilter
-import oscUtility
+#import oscFilter
+#import oscUtility
 #from macrobull.alias import alias
 
-from macrobull.misc import extend, tex
+try:
+	reduce
+except NameError:
+	from functools import reduce
+
+
+from macrobull.linear import extend
+from macrobull.misc import tex
 #import neoScope
 #import rigol
 

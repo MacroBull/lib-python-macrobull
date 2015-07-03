@@ -24,7 +24,7 @@ import sys
 import numpy as np
 #from pylab import *
 
-from __init__ import *
+from .__init__ import *
 
 
 #SAMPLESIZE=2048
@@ -79,20 +79,36 @@ def loadWaveFromFile(filename,withUnit=True, chSepFile = False):
 		units=next(f)
 
 		r.chTitles=titles[:-2]
-		r.tUnit = 's'
-		r.chUnits = units[:-2]
+#		r.tUnit = 's'
+#		r.chUnits = units[:-2]
+#		r.chCnt = len(units)-2
+
+#		t = float(units[-2])
+#		t_inc = float(units[-1])
+#
+#		r.t = []
+#		r.chs = [[] for i in range(r.chCnt)]
+#		for line in f:
+#			r.t.append(t)
+#			for i in range(r.chCnt):
+#				r.chs[i].append(float(line[i]))
+#			t += t_inc
+#
+#		r.t = np.array(r.t)
+#		for i in range(r.chCnt): r.chs[i] = np.array(r.chs[i])
+
+		r.tUnit = units[0]
+		r.chUnits = units[1:]
 		r.chCnt = len(units)-2
 
-		t = float(units[-2])
-		t_inc = float(units[-1])
+		r.chTitles=titles[1:-1]
 
 		r.t = []
 		r.chs = [[] for i in range(r.chCnt)]
 		for line in f:
-			r.t.append(t)
+			r.t.append(float(line[0]))
 			for i in range(r.chCnt):
-				r.chs[i].append(float(line[i]))
-			t += t_inc
+				r.chs[i].append(float(line[1+i]))
 
 		r.t = np.array(r.t)
 		for i in range(r.chCnt): r.chs[i] = np.array(r.chs[i])

@@ -90,7 +90,7 @@ class Source():
 				r.append(buf)
 			else:
 				if spec == -1: wordSize *= spec
-				r.append(struct.unpack('<' + STRUCT_FORMAT_DICT[wordSize], buf))
+				r.append(struct.unpack('<' + STRUCT_FORMAT_DICT[wordSize]*length, buf))
 		return r
 		# try yield ?
 
